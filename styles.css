@@ -1,0 +1,81 @@
+body {
+  background-color: #121212;
+  color: #fafafa;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  background-color: #303f9f;
+  text-align: center;
+  padding: 1em;
+  margin: 2em;
+}
+
+.stack {
+  background-color: #121212;
+  padding: 1em;
+  margin: 2em;
+}
+
+#btn-reachOut {
+  background-color: #fafafa;
+  color: #121212;
+  border-radius: 5px;
+  border: 1px solid #fafafa;
+  font-size: 1em;
+}
+
+#btn-reachOut:hover {
+  background-color: #bababa;
+}
+
+#btn-reachOut:active {
+  border: 1px solid #121212;
+}
+
+a {
+  color: #fafafa;
+}
+
+#txt-title {
+  font-style: oblique;
+  margin-bottom: auto;
+}
+
+/* ------Typing Effect------ */
+
+.typing-wrapper {
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 19ch;
+  animation: typing 1s steps(19), blink 0.5s step-end alternate;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
