@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <title>emhofer.xyz</title>
   <script src="index.js"></script>
+  <title>emhofer.xyz</title>
 </head>
 
 <body class="test">
   <header>
-    <button type="button" class="theme-icon">toggle
+    <button type="button" class="theme-icon">mode toggle
     </button>
-    <div>lang toggle</div>
+    <button>lang toggle</button>
   </header>
   <main>
     <div class="header">
@@ -24,14 +24,35 @@
           <p id="txt-subtitle">hi, I'm a web developer</p>
         </div>
       </div>
-      <button id="btn-reachOut">reach out</button>
+      <a href="#reachOutForm">reach out</a>
     </div>
     <div class="stack">
       <h1>my stack</h1>
-      <p>React</p>
-      <p>React</p>
-      <p>React</p>
-      <p>React</p>
+      <ul>
+        <li>React</li>
+        <li>React</li>
+        <li>React</li>
+        <li>React</li>
+      </ul>
+    </div>
+    <div class="portfolio">
+      <h1>my portfolio</h1>
+      <ul>
+        <li>Github</li>
+        <li>Github</li>
+        <li>Github</li>
+        <li>Github</li>
+      </ul>
+    </div>
+    <div id="reachOutForm" class="reachOut">
+      <h1>reach out</h1>
+      <form action="">
+        <label for="contactEmail">Email: </label>
+        <input type="email" name="contactEmail" id="contactEmail">
+        <label for="contactMessage">Message: </label>
+        <textarea id="contactMessage" name="contactMessage" rows="4" cols="50"></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </div>
     <footer>
       <a href="#">Privacy</a>

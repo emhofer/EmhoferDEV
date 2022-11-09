@@ -1,70 +1,44 @@
-/* ------Dark/Light Toggle------ */
-/* https://traveling-coderman.net/code/light-mode/ */
-:root:not(.light) {
-  --background-color: #044965;
-  --primary-color: #05668d;
-  --font-color: white;
-  --secondary-font-color: rgba(226, 232, 240, 1);
-  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+/* ------Initial Settings------ */
 
-:root.light {
-  --background-color: #f8f9fa;
-  --primary-color: #dee2e6;
-  --font-color: #212529;
-  --secondary-font-color: #495057;
+html {
+  scroll-behavior: smooth;
 }
-
-/* ----------------------------- */
 
 body {
   background-color: var(--background-color);
-  color:var(--font-color);
+  color: var(--font-color);
   font-family: sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  margin: 2em;
 }
 
 footer {
   display: flex;
   justify-content: space-around;
+  margin: 2em;
 }
 
 .header {
-  background-color: #303f9f;
+  background-color: var(--primary-color);
   text-align: center;
   padding: 1em;
   margin: 2em;
 }
 
-.stack {
-  background-color: #121212;
+.stack,
+.portfolio,
+.reachOut {
+  background-color: var(--background-color);
   padding: 1em;
   margin: 2em;
 }
 
-#btn-reachOut {
-  background-color: #fafafa;
-  color: #121212;
-  border-radius: 5px;
-  border: 1px solid #fafafa;
-  font-size: 1em;
-}
-
-#btn-reachOut:hover {
-  background-color: #bababa;
-}
-
-#btn-reachOut:active {
-  border: 1px solid #121212;
-}
-
 a {
-  color: #fafafa;
+  color: var(--font-color);
 }
 
 #txt-title {
@@ -72,10 +46,29 @@ a {
   margin-bottom: auto;
 }
 
+input,
+label {
+  display: block;
+}
+
+/* ------Dark/Light Toggle------ */
+/* https://traveling-coderman.net/code/light-mode/ */
+:root:not(.light) {
+  --background-color: #121212;
+  --primary-color: cornflowerblue;
+  --font-color: #fafafa;
+}
+
+:root.light {
+  --background-color: #fafafa;
+  --primary-color: cornflowerblue;
+  --font-color: #121212;
+}
+
 /* ------Typing Effect------ */
+/* https://codepen.io/denic/pen/GRoOxbM */
 
 .typing-wrapper {
-  /*This part is important for centering*/
   display: grid;
   place-items: center;
 }
@@ -98,4 +91,3 @@ a {
     border-color: transparent;
   }
 }
-
