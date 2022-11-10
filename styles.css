@@ -51,6 +51,33 @@ label {
   display: block;
 }
 
+/* ------Progress Bar------ */
+.progress {
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress:before,
+.progress:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  transform: skew(-30deg);
+}
+
+.progress:before {
+  width: 80%;
+  left: -10%;
+  background: var(--primary-color);
+}
+
+.progress:after {
+  width: 40%;
+  right: -10%;
+  background: var(--background-color);
+}
+
 /* ------Dark/Light Toggle------ */
 /* https://traveling-coderman.net/code/light-mode/ */
 :root:not(.light) {
