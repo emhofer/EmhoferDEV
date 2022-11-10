@@ -125,12 +125,14 @@ input[type="submit"] {
   --background-color: #121212;
   --primary-color: cornflowerblue;
   --font-color: #fafafa;
+  --secondary-color: #aaaaaa;
 }
 
 :root.light {
   --background-color: #fafafa;
   --primary-color: cornflowerblue;
   --font-color: #121212;
+  --secondary-color: #aaaaaa;
 }
 
 /* ------Typing Effect------ */
@@ -158,4 +160,39 @@ input[type="submit"] {
   50% {
     border-color: transparent;
   }
+}
+
+/* ------Language Dropdown------ */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: var(--background-color);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }
