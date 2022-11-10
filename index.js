@@ -24,7 +24,7 @@ if (isLight()) {
 }
 
 addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".theme-icon").addEventListener("click", () => {
+  document.querySelector(".btn-mode").addEventListener("click", () => {
     toggleLocalStorageItem();
     toggleRootClass();
   });

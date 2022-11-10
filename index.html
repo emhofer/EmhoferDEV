@@ -5,20 +5,22 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
   <script src="index.js"></script>
-  <title>emhofer.xyz</title>
+  <script src="https://kit.fontawesome.com/447327373a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>emhofer</title>
 </head>
 
 <body class="test">
   <header>
-    <button type="button" class="theme-icon">mode toggle
+    <button type="button" class="btn-header btn-mode"><i class="fa-solid fa-circle-half-stroke fa-xl"></i>
     </button>
-    <button>lang toggle</button>
+    <button type="button" class="btn-header"><i class="fa-solid fa-language fa-xl"></i></button>
   </header>
   <main>
     <div class="header">
-      <h1 id="txt-title">emhofer</h1>
+
+      <h1 id="txt-title"><img src="avatar.jpg" alt="Avatar" class="avatar"> emhofer</h1>
       <div class="typing-wrapper">
         <div class="typing-demo">
           <p id="txt-subtitle">hi, I'm a web developer</p>
@@ -27,22 +29,52 @@
       <a href="#reachOutForm">reach out</a>
     </div>
     <div class="stack">
-      <h1>my stack</h1>
-      <p>React
-      <div class="progress"></div>
-      </p>
+      <h1 class="sectionHeading">my stack</h1>
+      <div class="containerStack">
+        <div class="stackItem">
+          <i class="fa-brands fa-html5 fa-2xl">
+          </i>
+          <div class="progress"></div>
+        </div>
+        <div class="stackItem">
+          <i class="fa-brands fa-css3 fa-2xl">
+          </i>
+          <div class="progress"></div>
+        </div>
+        <div class="stackItem">
+          <i class="fa-brands fa-react fa-2xl">
+          </i>
+          <div class="progress"></div>
+        </div>
+      </div>
     </div>
     <div class="portfolio">
-      <h1>my portfolio</h1>
-      <ul>
-        <li>Github</li>
-        <li>Github</li>
-        <li>Github</li>
-        <li>Github</li>
-      </ul>
+      <h1 class="sectionHeading">my portfolio</h1>
+      <div class="containerCards">
+        <div class="card">
+          <h1>title</h1>
+          <p>Description</p>
+          <div class="githubInfo">Github Info</div>
+        </div>
+        <div class="card">
+          <h1>title</h1>
+          <p>Description</p>
+          <div class="githubInfo">Github Info</div>
+        </div>
+        <div class="card">
+          <h1>title</h1>
+          <p>Description</p>
+          <div class="githubInfo">Github Info</div>
+        </div>
+        <div class="card">
+          <h1>title</h1>
+          <p>Description</p>
+          <div class="githubInfo">Github Info</div>
+        </div>
+      </div>
     </div>
     <div id="reachOutForm" class="reachOut">
-      <h1>reach out</h1>
+      <h1 class="sectionHeading">reach out</h1>
       <form action="">
         <label for="contactEmail">Email: </label>
         <input type="email" name="contactEmail" id="contactEmail">
