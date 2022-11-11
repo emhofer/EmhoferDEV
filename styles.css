@@ -106,7 +106,7 @@ footer {
 
 #btnReachOut:active {
   border: 1px solid var(--font-color);
-  background-color: var(--background-color);
+  background-color: #9c9da2;
 }
 
 .stack,
@@ -156,7 +156,7 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
   border: 1px solid var(--font-color);
-  background-color: var(--background-color);
+  background-color: #9c9da2;
 }
 
 .containerCards {
