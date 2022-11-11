@@ -8,102 +8,125 @@
   <script src="index.js"></script>
   <script src="https://kit.fontawesome.com/447327373a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
-  <title>emhofer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>Peter Emhofer</title>
 </head>
 
-<body class="test">
-  <header>
-    <button type="button" class="btn-header btn-mode"><i class="fa-solid fa-circle-half-stroke fa-xl"></i>
-    </button>
-    <div class="dropdown">
-      <button type="button" class="btn-header">
-        <i class="fa-solid fa-language fa-xl dropbtn"></i>
-      </button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">EN</a>
-        <a href="#">DE</a>
-        <a href="#">ES</a>
-        <a href="#">FR</a>
-        <a href="#">KR</a>
+<body>
+  <div class="pageBox">
+
+
+    <header>
+      <p id="txt-title">peter emhofer</p>
+      <div class="headerButtons">
+        <div class="dropdown">
+          <button type="button" class="btn-header">
+            <i class="fa-solid fa-language fa-xl dropbtn"></i>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">EN</a>
+            <a href="#">DE</a>
+            <a href="#">ES</a>
+            <a href="#">FR</a>
+            <a href="#">KO</a>
+          </div>
+        </div>
+        <button type="button" class="btn-header btn-mode"><i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+        </button>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="header">
-      <h1 id="txt-title"><img src="avatar.jpg" alt="Avatar" class="avatar"> emhofer</h1>
-      <div class="typing-wrapper">
-        <div class="typing-demo">
-          <p id="txt-subtitle">hi, I'm a web developer</p>
+    </header>
+    <main>
+      <div class="heroArea">
+        <div class="about">
+          <h1>
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+          </h1>
+          <p>Hi, I'm a full stack developer</p>
+          <p>Maecenas tincidunt placerat volutpat. Praesent a congue nisi. Suspendisse et mauris mauris. Aenean
+            vestibulum elit mi,
+            quis posuere neque feugiat id. Praesent id dolor convallis, auctor justo nec, blandit felis. Aliquam luctus
+            orci felis,
+            eu mattis metus auctor et. Fusce tempus commodo nisi in aliquam.</p>
+          <button id="btnReachOut">
+            <a href="#reachOutForm">reach out</a>
+          </button>
         </div>
-      </div>
-      <button>
-        <a href="#reachOutForm">reach out</a>
-      </button>
-    </div>
-    <div class="stack">
-      <h1 class="sectionHeading">my stack</h1>
-      <div class="containerStack">
-        <div class="stackItem">
-          <i class="fa-brands fa-html5 fa-2xl">
-          </i>
+        <div class="stack">
+          <h1 class="sectionHeading">my stack</h1>
+          <div class="containerStack">
+            <div class="stackItem">
+              <i class="fa-brands fa-html5 fa-2xl">
+              </i>
+            </div>
+            <div class="stackItem">
+              <i class="fa-brands fa-css3 fa-2xl">
+              </i>
+            </div>
+            <div class="stackItem">
+              <i class="fa-brands fa-react fa-2xl">
+              </i>
+            </div>
+            <div class="stackItem">
+              <i class="fa-brands fa-python fa-2xl">
+              </i>
+            </div>
+            <div class="stackItem">
+              <i class="fa-brands fa-node fa-2xl">
+              </i>
+            </div>
+          </div>
         </div>
-        <div class="stackItem">
-          <i class="fa-brands fa-css3 fa-2xl">
-          </i>
-        </div>
-        <div class="stackItem">
-          <i class="fa-brands fa-react fa-2xl">
-          </i>
-        </div>
-        <div class="stackItem">
-          <i class="fa-brands fa-python fa-2xl">
-          </i>
-        </div>
-        <div class="stackItem">
-          <i class="fa-brands fa-node fa-2xl">
-          </i>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio">
-      <h1 class="sectionHeading">my portfolio</h1>
-      <div class="containerCards">
-        <div class="card">
-          <h1>title</h1>
-          <p>Description</p>
-          <div class="githubInfo">Github Info</div>
-        </div>
-        <div class="card">
-          <h1>title</h1>
-          <p>Description</p>
-          <div class="githubInfo">Github Info</div>
-        </div>
-        <div class="card">
-          <h1>title</h1>
-          <p>Description</p>
-          <div class="githubInfo">Github Info</div>
-        </div>
-        <div class="card">
-          <h1>title</h1>
-          <p>Description</p>
-          <div class="githubInfo">Github Info</div>
+        <div class="containerDownArrow">
+          <button class="downArrow">
+            <a href="#portfolio">
+              <i class="fa-solid fa-chevron-down"></i></a>
+          </button>
         </div>
       </div>
+  </div>
+  <div id="portfolio" class="portfolio">
+    <h1 class="sectionHeading">my portfolio</h1>
+    <div class="containerCards">
+      <div class="card">
+        <h1>title</h1>
+        <p>Description</p>
+        <div class="githubInfo">Github Info</div>
+      </div>
+      <div class="card">
+        <h1>title</h1>
+        <p>Description</p>
+        <div class="githubInfo">Github Info</div>
+      </div>
+      <div class="card">
+        <h1>title</h1>
+        <p>Description</p>
+        <div class="githubInfo">Github Info</div>
+      </div>
+      <div class="card">
+        <h1>title</h1>
+        <p>Description</p>
+        <div class="githubInfo">Github Info</div>
+      </div>
     </div>
-    <div id="reachOutForm" class="reachOut">
-      <h1 class="sectionHeading">reach out</h1>
-      <form action="">
-        <label for="contactEmail">Email: </label>
-        <input type="email" name="contactEmail" id="contactEmail">
-        <label for="contactMessage">Message: </label>
-        <textarea id="contactMessage" name="contactMessage" rows="10"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-    <footer>
+  </div>
+  <div id="reachOutForm" class="reachOut">
+    <h1 class="sectionHeading">reach out</h1>
+    <form action="">
+      <label for="contactEmail">Email: </label>
+      <input type="email" name="contactEmail" id="contactEmail">
+      <label for="contactMessage">Message: </label>
+      <textarea id="contactMessage" name="contactMessage" rows="10"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <footer>
+    <div class="footerLinks">
       <a href="#">Privacy</a>
       <a href="#">Imprint</a>
-    </footer>
+    </div>
+  </footer>
 </body>
 
 </html>

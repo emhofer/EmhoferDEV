@@ -1,7 +1,27 @@
-/* ------Initial Settings------ */
+@import url(languageToggle.css);
+
+/* ------Variables (Dark/Light)------ */
+:root:not(.light) {
+  --background-color: #1b2a4a;
+  --primary-color: #1a429c;
+  --font-color: #ededee;
+  --secondary-color: #1a429c;
+  --language-color: #ededee;
+}
+
+:root.light {
+  --background-color: #ededee;
+  --primary-color: #5195ea;
+  --font-color: #1b2a4a;
+  --secondary-color: #5195ea;
+  --language-color: #1b2a4a;
+}
+
+/* ------Main Styles------ */
 
 html {
   scroll-behavior: smooth;
+  font-family: "Open Sans";
 }
 
 body {
@@ -9,40 +29,89 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 header {
+  margin: 0 2em;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 2em;
+  height: 100px;
+}
+
+#txt-title {
+  display: inline-block;
+  font-style: oblique;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 1rem;
 }
 
 footer {
-  display: flex;
-  justify-content: space-around;
-  margin: 2em;
+  padding: 1em;
+  margin: 2em 2em 0;
 }
 
-.header {
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 25%;
+}
+
+.heroArea {
   background-color: var(--primary-color);
   text-align: center;
   padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+text-transform: none;
 }
 
-.header button {
-  border: 1 px var(--secondary-color);
-  border-radius: 5px;
+.heroArea a {
+  color: #1b2a4a;
+  text-transform: capitalize;
+}
+
+.containerDownArrow {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.downArrow {
+  background: transparent;
+  border: none !important;
+  cursor: pointer;
+}
+
+.downArrow a {
+  color: var(--font-color);
+}
+
+.about {
+  padding: 1em;
+  margin: 2rem;
+}
+
+#btnReachOut {
+  border: 1px solid var(--secondary-color);
+  border-radius: 100px;
   padding: 5px 10px;
 }
 
-.header a {
-  color: #121212;
+#btnReachOut:hover {
+  border: 1px solid var(--font-color);
+}
+
+#btnReachOut:active {
+  border: 1px solid var(--font-color);
+  background-color: var(--background-color);
 }
 
 .stack,
 .portfolio,
 .reachOut {
-  background-color: var(--background-color);
   padding: 1em;
   margin: 2em;
 }
@@ -52,12 +121,6 @@ a {
   text-decoration: none;
 }
 
-#txt-title {
-  font-style: oblique;
-  margin-bottom: auto;
-  background-color: var(--primary-color);
-}
-
 input,
 label,
 textarea {
@@ -65,23 +128,35 @@ textarea {
   box-sizing: border-box;
   width: 50%;
   margin: auto;
-  margin-top: 5px;
+  margin-top: 1rem;
 }
 
 input,
 textarea {
   background-color: var(--secondary-color);
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1 solid var(--secondary-color);
+  min-height: 2rem;
+  color: var(--font-color);
+  padding: 10px;
 }
 
 input[type="submit"] {
   width: auto;
   border: 1 px var(--primary-color);
   background-color: var(--primary-color);
-  color: #fafafa;
-  border-radius: 5px;
-  padding: 5px 10px;
+  color: var(--font-color);
+  border-radius: 50px;
+  padding: 0 1rem;
+}
+
+input[type="submit"]:hover {
+  border: 1px solid var(--font-color);
+}
+
+input[type="submit"]:active {
+  border: 1px solid var(--font-color);
+  background-color: var(--background-color);
 }
 
 .containerCards {
@@ -90,26 +165,30 @@ input[type="submit"] {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.card {
+  background-color: var(--primary-color);
+  text-align: center;
+  border-radius: 1rem;
+}
+
 .containerStack {
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .stackItem {
   display: flex;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   height: 2em;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 1rem;
   justify-content: center;
   align-items: center;
 }
 
-.card {
-  background-color: var(--primary-color);
-  text-align: center;
-  border-radius: 5px;
+.stackItem:hover {
+  border: 1 px var(--font-color);
 }
 
 .githubInfo {
@@ -118,9 +197,10 @@ input[type="submit"] {
 
 .avatar {
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  margin-right: 0.5rem;
 }
 
 .sectionHeading {
@@ -131,83 +211,5 @@ input[type="submit"] {
   background: transparent;
   border: none !important;
   color: var(--font-color);
-}
-
-/* ------Dark/Light Toggle------ */
-/* https://traveling-coderman.net/code/light-mode/ */
-:root:not(.light) {
-  --background-color: #121212;
-  --primary-color: cornflowerblue;
-  --font-color: #fafafa;
-  --secondary-color: #eeeeee;
-}
-
-:root.light {
-  --background-color: #fafafa;
-  --primary-color: cornflowerblue;
-  --font-color: #121212;
-  --secondary-color: #eeeeee;
-}
-
-/* ------Typing Effect------ */
-/* https://codepen.io/denic/pen/GRoOxbM */
-
-.typing-wrapper {
-  display: grid;
-  place-items: center;
-}
-
-.typing-demo {
-  width: 19ch;
-  animation: typing 1s steps(19), blink 0.5s step-end alternate;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-/* ------Language Dropdown------ */
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  right: 0;
-  display: none;
-  position: absolute;
-  background-color: var(--secondary-color);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  padding: 12px 16px;
-  display: block;
-  text-decoration: none;
-  color: #121212;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  color: var(--primary-color);
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
+  cursor: pointer;
 }
