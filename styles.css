@@ -29,6 +29,16 @@ footer {
   padding: 1em;
 }
 
+.header button {
+  border: 1 px var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.header a {
+  color: #121212;
+}
+
 .stack,
 .portfolio,
 .reachOut {
@@ -39,6 +49,7 @@ footer {
 
 a {
   color: var(--font-color);
+  text-decoration: none;
 }
 
 #txt-title {
@@ -57,8 +68,20 @@ textarea {
   margin-top: 5px;
 }
 
+input,
+textarea {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: 1 solid var(--secondary-color);
+}
+
 input[type="submit"] {
   width: auto;
+  border: 1 px var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .containerCards {
@@ -69,12 +92,24 @@ input[type="submit"] {
 
 .containerStack {
   display: grid;
-  grid-gap: 50%;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stackItem {
+  display: flex;
+  background-color: var(--primary-color);
+  height: 2em;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   background-color: var(--primary-color);
   text-align: center;
+  border-radius: 5px;
 }
 
 .githubInfo {
@@ -98,41 +133,20 @@ input[type="submit"] {
   color: var(--font-color);
 }
 
-/* ------Progress Bar------ */
-.progress {
-  display: inline-block;
-  width: 95%;
-  float: right;
-  height: 1em;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--primary-color);
-}
-
-.progress:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  transform: skew(-30deg);
-  width: 90%;
-  left: -10%;
-  background: var(--primary-color);
-}
-
 /* ------Dark/Light Toggle------ */
 /* https://traveling-coderman.net/code/light-mode/ */
 :root:not(.light) {
   --background-color: #121212;
   --primary-color: cornflowerblue;
   --font-color: #fafafa;
-  --secondary-color: #aaaaaa;
+  --secondary-color: #eeeeee;
 }
 
 :root.light {
   --background-color: #fafafa;
   --primary-color: cornflowerblue;
   --font-color: #121212;
-  --secondary-color: #aaaaaa;
+  --secondary-color: #eeeeee;
 }
 
 /* ------Typing Effect------ */
@@ -185,11 +199,12 @@ input[type="submit"] {
   padding: 12px 16px;
   display: block;
   text-decoration: none;
+  color: #121212;
 }
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  color: var(--background-color);
+  color: var(--primary-color);
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
