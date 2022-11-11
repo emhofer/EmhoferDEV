@@ -148,6 +148,7 @@ input[type="submit"] {
   color: var(--font-color);
   border-radius: 50px;
   padding: 0 1rem;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
