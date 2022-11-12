@@ -14,8 +14,8 @@
   background-color: var(--language-color);
   z-index: 1;
   border-radius: 5px;
-  margin-top: -1.68rem;
-  margin-right: 3rem;
+  /* margin-top: -1.68rem;
+  margin-right: 3rem; */
 }
 
 /* Links inside the dropdown */
@@ -35,5 +35,5 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
-  display: flex;
+  display: block;
 }
