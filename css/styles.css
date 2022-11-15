@@ -34,7 +34,6 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   font-family: sans-serif;
-  text-transform: capitalize;
 }
 
 header {
@@ -58,6 +57,7 @@ header {
   font-size: 2rem;
   font-weight: bold;
   margin-right: 1rem;
+  text-transform: capitalize;
 }
 
 footer {
@@ -176,6 +176,7 @@ input[type="submit"]:active {
   background-color: var(--primary-color);
   text-align: center;
   border-radius: 1rem;
+  min-height: 150px;
 }
 
 .containerStack {
@@ -231,6 +232,7 @@ input[type="submit"]:active {
 
 .sectionHeading {
   text-align: center;
+  text-transform: capitalize;
 }
 
 .btn-header {
