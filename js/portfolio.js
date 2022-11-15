@@ -1,19 +1,21 @@
 import { request } from "https://cdn.skypack.dev/@octokit/request";
 import githubToken from "../_ignore/config.js";
 
-const result = await request("GET /users/{owner}/repos", {
+let result = await request("GET /users/{owner}/repos", {
   headers: {
     authorization: `token ${githubToken}`,
   },
   owner: "emhofer",
 });
 
+result = result.data.filter((item) => {
+  return item.name !== "emhofer";
+});
+
 const containerCards = document.getElementById("containerCards");
 
-console.log(result.data[1]);
-
-for (let i = 0; i < result.data.length; i++) {
-  const repo = result.data[i];
+for (let i = 0; i < result.length; i++) {
+  const repo = result[i];
   const repoCard = document.createElement("div");
   repoCard.classList.add("card");
   const repoTitle = document.createElement("h1");
