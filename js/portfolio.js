@@ -12,12 +12,17 @@ result = result.data.filter((item) => {
   return item.name !== "emhofer";
 });
 
+console.log(result);
+
 const containerCards = document.getElementById("containerCards");
 
 for (let i = 0; i < result.length; i++) {
   const repo = result[i];
   const repoCard = document.createElement("div");
   repoCard.classList.add("card");
+  const repoLink = document.createElement("a");
+  repoLink.href = repo.html_url;
+  repoLink.setAttribute("target", "_blank");
   const repoTitle = document.createElement("h1");
   const repoDescription = document.createElement("p");
   const repoLanguage = document.createElement("div");
@@ -25,9 +30,10 @@ for (let i = 0; i < result.length; i++) {
   repoTitle.innerHTML = repo.name;
   repoDescription.innerHTML = repo.description;
   repoLanguage.innerHTML = repo.language;
-  repoCard.appendChild(repoTitle);
-  repoCard.appendChild(repoDescription);
-  repoCard.appendChild(repoLanguage);
+  repoCard.appendChild(repoLink);
+  repoLink.appendChild(repoTitle);
+  repoLink.appendChild(repoDescription);
+  repoLink.appendChild(repoLanguage);
   containerCards.appendChild(repoCard);
 }
 
