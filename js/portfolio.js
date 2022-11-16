@@ -8,8 +8,6 @@ result = result.data.filter((item) => {
   return item.name !== "emhofer";
 });
 
-console.log(result);
-
 const containerCards = document.getElementById("containerCards");
 
 for (let i = 0; i < result.length; i++) {
@@ -44,10 +42,10 @@ for (let i = 0; i < result.length; i++) {
   repoDescription.innerHTML = repo.description;
   repoLanguage.innerHTML = repo.language;
   repoTitle.insertBefore(repoIcon, repoTitle.firstChild);
-  repoCard.appendChild(repoLink);
-  repoLink.appendChild(repoTitle);
-  repoLink.appendChild(repoDescription);
-  repoLink.appendChild(repoLanguage);
+  repoLink.appendChild(repoCard);
+  repoCard.appendChild(repoTitle);
+  repoCard.appendChild(repoDescription);
+  repoCard.appendChild(repoLanguage);
   repoLanguage.insertBefore(languageIcon, repoLanguage.firstChild);
-  containerCards.appendChild(repoCard);
+  containerCards.appendChild(repoLink);
 }

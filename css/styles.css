@@ -177,6 +177,7 @@ input[type="submit"]:active {
   border-radius: 1rem;
   min-height: 150px;
   padding-left: 1em;
+  padding-top: 1px;
 }
 
 .containerStack {
@@ -216,10 +217,6 @@ input[type="submit"]:active {
 .stackItem:hover i {
   transition: 1s;
   position: relative;
-}
-
-.githubInfo {
-  margin-bottom: 1em;
 }
 
 .avatar {
