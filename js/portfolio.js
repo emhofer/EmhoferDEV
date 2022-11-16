@@ -1,10 +1,6 @@
 import { request } from "https://cdn.skypack.dev/@octokit/request";
-import githubToken from "../_ignore/config.js";
 
 let result = await request("GET /users/{owner}/repos", {
-  headers: {
-    authorization: `token ${githubToken}`,
-  },
   owner: "emhofer",
 });
 
