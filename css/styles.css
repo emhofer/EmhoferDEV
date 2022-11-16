@@ -251,8 +251,14 @@ input[type="submit"]:active {
   padding-bottom: 1em;
 }
 
-.containerCards a {
-  -webkit-tap-highlight-color: transparent;
+#privacySection {
+  background-color: var(--primary-color);
+}
+
+#privacy {
+  padding: 2em;
+  width: 50%;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
