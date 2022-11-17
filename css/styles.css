@@ -27,7 +27,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-family: "Open Sans";
 }
 
 body {
@@ -79,16 +78,6 @@ footer {
 .heroArea a {
   color: #1b2a4a;
   text-transform: capitalize;
-}
-
-.downArrow {
-  background: transparent;
-  border: none !important;
-  cursor: pointer;
-}
-
-.downArrow a {
-  color: var(--font-color);
 }
 
 .about {
@@ -251,14 +240,14 @@ input[type="submit"]:active {
   padding-bottom: 1em;
 }
 
-#privacySection {
-  background-color: var(--primary-color);
+#emailLink {
+  text-transform: none;
+  text-decoration: underline;
+  color: var(--font-color);
 }
 
-#privacy {
-  padding: 2em;
-  width: 50%;
-  margin: auto;
+#reachOutForm {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
