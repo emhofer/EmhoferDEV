@@ -3,17 +3,17 @@
 /* ------Variables (Dark/Light)------ */
 :root:not(.light) {
   --background-color: #1b2a4a;
-  --primary-color: #1a429c;
-  --font-color: #ededee;
-  --secondary-color: #1a429c;
+  --primary-color: #121212;
+  --font-color: #bcbcbb;
+  --font-color2: #bcbcbb;
   --language-color: #ededee;
 }
 
 :root.light {
-  --background-color: #ededee;
-  --primary-color: #5195ea;
-  --font-color: #1b2a4a;
-  --secondary-color: #5195ea;
+  --background-color: #1b2a4a;
+  --primary-color: #bcbcbb;
+  --font-color: #bcbcbb;
+  --font-color2: #1b2a4a;
   --language-color: #1b2a4a;
 }
 
@@ -71,89 +71,27 @@ footer {
 
 .heroArea {
   background-color: var(--primary-color);
+  color: var(--font-color2);
   text-align: center;
   padding: 1em;
-}
-
-.heroArea a {
-  color: #1b2a4a;
-  text-transform: capitalize;
 }
 
 .about {
   padding: 1em;
   margin: 2rem;
   text-transform: none;
-}
-
-#btnReachOut {
-  border: 1px solid var(--secondary-color);
-  border-radius: 100px;
-  padding: 5px 10px;
-}
-
-#btnReachOut:hover {
-  border: 1px solid var(--font-color);
-}
-
-#btnReachOut:active {
-  border: 1px solid var(--font-color);
-  background-color: #9c9da2;
+  font-weight: 700;
 }
 
 .stack,
-.portfolio,
-#reachOutDiv {
+.portfolio {
   padding: 1em;
   margin: 2em 1em 0 1em;
-}
-
-.reachOut {
-  background-color: var(--primary-color);
 }
 
 a {
   color: var(--font-color);
   text-decoration: none;
-}
-
-input,
-label,
-textarea {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  margin: auto;
-  margin-top: 1rem;
-}
-
-input,
-textarea {
-  background-color: var(--background-color);
-  border-radius: 20px;
-  border: 1 solid var(--background-color);
-  min-height: 2rem;
-  color: var(--font-color);
-  padding: 10px;
-}
-
-input[type="submit"] {
-  width: 50%;
-  border: 1 px var(--background-color);
-  background-color: var(--background-color);
-  color: var(--font-color);
-  border-radius: 50px;
-  padding: 0 1rem;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  border: 1px solid var(--font-color);
-}
-
-input[type="submit"]:active {
-  border: 1px solid var(--font-color);
-  background-color: #9c9da2;
 }
 
 .containerCards {
@@ -163,6 +101,7 @@ input[type="submit"]:active {
 
 .card {
   background-color: var(--primary-color);
+  color: var(--font-color2);
   border-radius: 1rem;
   min-height: 150px;
   padding-left: 1em;
@@ -178,6 +117,7 @@ input[type="submit"]:active {
 .stackItem {
   display: flex;
   background-color: var(--background-color);
+  color: var(--font-color);
   height: 2em;
   padding: 5px;
   border-radius: 1rem;
@@ -243,11 +183,7 @@ input[type="submit"]:active {
 #emailLink {
   text-transform: none;
   text-decoration: underline;
-  color: var(--font-color);
-}
-
-#reachOutForm {
-  display: none;
+  color: var(--font-color2);
 }
 
 @media only screen and (min-width: 768px) {
@@ -255,8 +191,7 @@ input[type="submit"]:active {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about,
-  #reachOutDiv {
+  .about {
     width: 50%;
     margin: auto;
   }
