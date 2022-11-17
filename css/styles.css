@@ -2,18 +2,16 @@
 
 /* ------Variables (Dark/Light)------ */
 :root:not(.light) {
-  --background-color: #1b2a4a;
+  --background-color: #121212;
   --primary-color: #121212;
   --font-color: #bcbcbb;
-  --font-color2: #bcbcbb;
   --language-color: #ededee;
 }
 
 :root.light {
-  --background-color: #1b2a4a;
+  --background-color: #cdcdcc;
   --primary-color: #bcbcbb;
-  --font-color: #bcbcbb;
-  --font-color2: #1b2a4a;
+  --font-color: #121212;
   --language-color: #1b2a4a;
 }
 
@@ -40,6 +38,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid var(--font-color);
 }
 
 #headerDiv {
@@ -71,7 +70,7 @@ footer {
 
 .heroArea {
   background-color: var(--primary-color);
-  color: var(--font-color2);
+  color: var(--font-color);
   text-align: center;
   padding: 1em;
 }
@@ -101,7 +100,8 @@ a {
 
 .card {
   background-color: var(--primary-color);
-  color: var(--font-color2);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
   border-radius: 1rem;
   min-height: 150px;
   padding-left: 1em;
@@ -120,6 +120,7 @@ a {
   color: var(--font-color);
   height: 2em;
   padding: 5px;
+  border: 1px solid var(--font-color);
   border-radius: 1rem;
   justify-content: center;
   align-items: center;
@@ -153,6 +154,7 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 1px solid var(--font-color);
   margin-right: 0.5rem;
 }
 
@@ -183,7 +185,7 @@ a {
 #emailLink {
   text-transform: none;
   text-decoration: underline;
-  color: var(--font-color2);
+  color: var(--font-color);
 }
 
 @media only screen and (min-width: 768px) {
