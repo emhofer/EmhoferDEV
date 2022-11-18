@@ -1,10 +1,6 @@
-import { request } from "https://cdn.skypack.dev/@octokit/request";
-
-let result = await request("GET /users/{owner}/repos", {
-  owner: "emhofer",
-});
-
-result = result.data.filter((item) => {
+const response = await fetch("https://api.github.com/users/emhofer/repos");
+const data = await response.json();
+const result = data.filter((item) => {
   return item.name !== "emhofer";
 });
 
@@ -13,13 +9,16 @@ const containerCards = document.getElementById("containerCards");
 for (let i = 0; i < result.length; i++) {
   const repo = result[i];
   const repoCard = document.createElement("div");
-  repoCard.classList.add("card");
   const repoLink = document.createElement("a");
+  const repoIcon = document.createElement("i");
+  const languageIcon = document.createElement("i");
+  const repoTitle = document.createElement("h1");
+  const repoDescription = document.createElement("p");
+  const repoLanguage = document.createElement("div");
+  repoCard.classList.add("card");
   repoLink.href = repo.html_url;
   repoLink.setAttribute("target", "_blank");
-  const repoIcon = document.createElement("i");
   repoIcon.classList.add("fa-solid", "fa-code");
-  const languageIcon = document.createElement("i");
   languageIcon.classList.add("fa-solid", "fa-circle");
   let languageColor = "var(--primary-color)";
   switch (repo.language) {
@@ -34,9 +33,6 @@ for (let i = 0; i < result.length; i++) {
       break;
   }
   languageIcon.style.color = languageColor;
-  const repoTitle = document.createElement("h1");
-  const repoDescription = document.createElement("p");
-  const repoLanguage = document.createElement("div");
   repoLanguage.classList.add("githubInfo");
   repoTitle.innerHTML = repo.name;
   repoDescription.innerHTML = repo.description;

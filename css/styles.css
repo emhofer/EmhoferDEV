@@ -3,14 +3,12 @@
   --background-color: #121212;
   --primary-color: #121212;
   --font-color: #bcbcbb;
-  --language-color: #ededee;
 }
 
 :root.light {
   --background-color: #cdcdcc;
   --primary-color: #bcbcbb;
   --font-color: #121212;
-  --language-color: #1b2a4a;
 }
 
 /* ------Main Styles------ */
@@ -32,11 +30,11 @@ body {
 }
 
 header {
-  background-color: var(--background-color);
   position: sticky;
   top: 0;
   z-index: 999;
   border-bottom: 1px solid var(--font-color);
+  background-color: var(--background-color);
 }
 
 #headerDiv {
@@ -56,19 +54,8 @@ header {
   text-transform: capitalize;
 }
 
-footer {
-  padding: 1em 0;
-  margin: 0 2em;
-}
-
-.footerLinks {
-  display: flex;
-  justify-content: space-around;
-}
-
 .heroArea {
   background-color: var(--primary-color);
-  color: var(--font-color);
   text-align: center;
   padding: 1em;
 }
@@ -83,14 +70,8 @@ footer {
 .stack,
 .portfolio {
   padding: 1em;
-  margin: 2em 1em 0 1em;
+  margin: 1em;
 }
-
-a {
-  color: var(--font-color);
-  text-decoration: none;
-}
-
 .containerCards {
   display: grid;
   grid-gap: 1em;
@@ -106,6 +87,11 @@ a {
   padding-top: 1px;
 }
 
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
 .containerStack {
   display: grid;
   grid-gap: 1em;
@@ -114,8 +100,6 @@ a {
 
 .stackItem {
   display: flex;
-  background-color: var(--background-color);
-  color: var(--font-color);
   height: 2em;
   padding: 5px;
   border: 1px solid var(--font-color);
@@ -183,7 +167,6 @@ a {
 #emailLink {
   text-transform: none;
   text-decoration: underline;
-  color: var(--font-color);
 }
 
 @media only screen and (min-width: 768px) {
