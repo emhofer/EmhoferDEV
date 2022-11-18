@@ -1,5 +1,3 @@
-@import url(languageToggle.css);
-
 /* ------Variables (Dark/Light)------ */
 :root:not(.light) {
   --background-color: #121212;
