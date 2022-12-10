@@ -1,7 +1,7 @@
 const response = await fetch("https://api.github.com/users/emhofer/repos");
 const data = await response.json();
 const result = data.filter((item) => {
-  return item.name !== "emhofer";
+  return item.name !== "emhofer" && item.name !== "Configs";
 });
 
 const containerCards = document.getElementById("containerCards");
