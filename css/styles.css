@@ -1,13 +1,13 @@
 /* ------Variables (Dark/Light)------ */
 :root:not(.light) {
   --background-color: #343434;
-  --primary-color: #343434;
+  --primary-color: #565656;
   --font-color: #cdcdcc;
 }
 
 :root.light {
   --background-color: #cdcdcc;
-  --primary-color: #cdcdcc;
+  --primary-color: #ababab;
   --font-color: #121212;
 }
 
@@ -29,32 +29,8 @@ body {
   font-family: sans-serif;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  border-bottom: 1px solid var(--font-color);
-  background-color: var(--background-color);
-}
-
-#headerDiv {
-  margin: 0 2em 0 2em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-}
-
-#txt-title {
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-right: 1rem;
-  text-transform: capitalize;
-}
-
 .heroArea {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   text-align: center;
   padding: 1em;
 }
@@ -78,10 +54,9 @@ header {
 }
 
 .card {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   color: var(--font-color);
   border: 1px solid var(--font-color);
-  /* border-radius: 1rem; */
   min-height: 150px;
   padding-left: 1em;
   padding-top: 1px;
@@ -104,7 +79,6 @@ a {
   height: 2em;
   padding: 5px;
   border: 1px solid var(--font-color);
-  /* border-radius: 1rem; */
   justify-content: center;
   align-items: center;
 }
@@ -149,6 +123,10 @@ a {
   border: none !important;
   color: var(--font-color);
   cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
 }
 
 .card i {
