@@ -1,0 +1,48 @@
+[{
+  "fa": "fa-brands fa-html5",
+  "name": "HTML"
+},
+{
+  "fa": "fa-brands fa-css3",
+  "name": "CSS"
+},
+{
+  "fa": "fa-brands fa-js",
+  "name": "JavaScript"
+},
+{
+  "fa": "fa-brands fa-python",
+  "name": "Python"
+},
+{
+  "fa": "fa-brands fa-node-js",
+  "name": "NodeJS"
+},
+{
+  "fa": "fa-brands fa-react",
+  "name": "React"
+},
+{
+  "fa": "fa-brands fa-bootstrap",
+  "name": "Bootstrap"
+},
+{
+  "fa": "fa-brands fa-wordpress",
+  "name": "WordPress"
+},
+{
+  "fa": "fa-brands fa-git",
+  "name": "git"
+},
+{
+  "fa": "fa-solid fa-database",
+  "name": "SQL"
+},
+{
+  "fa": "fa-brands fa-linux",
+  "name": "Linux"
+},
+{
+  "fa": "fa-solid fa-terminal",
+  "name": "Terminal"
+}]

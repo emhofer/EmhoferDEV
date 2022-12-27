@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Personal website for Peter Emhofer.">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.css"/>
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css"/>
+    <link rel="icon" href="assets/avatar.webp">
+    <title>Peter Emhofer</title>
+  </head>
+  <body>
+    <button type="button" class="btn-header btn-mode" aria-label="ToggleDarkMode">
+      <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+    </button>
+    <main>
+      <div class="heroArea">
+        <div class="about">
+          <h1>
+            <img src="/assets/avatar.webp" alt="Avatar" class="avatar">
+          </h1>
+          <p>Hi, I'm a full stack developer.</p>
+          <p>Reach out:
+            <a id="emailLink" href="mailto:hello@emhofer.dev">hello@emhofer.dev</a>
+          </p>
+        </div>
+        <div class="stack">
+          <h1 class="sectionHeading">my stack</h1>
+          <div class="containerStack">
+            {% for item in stack %}
+              <div class="stackItem">
+                <i class="{{ item.fa }} fa-2xl"></i>
+                <span class="stackName">{{ item.name }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div id="portfolio" class="portfolio">
+        <h1 class="sectionHeading">my portfolio</h1>
+        <div class="containerCards" id="containerCards">
+          {% for item in portfolio %}
+            {% set color = item.language %}
+            <a href="{{ item.html_url }}" target="_blank">
+              <div class="card">
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+                <div
+                  class="githubInfo">
+                  {# TODO: set color dynamically #}
+                  {% set hex = "" %}
+                  {% for lang in languages %}
+                    {% if lang.name == item.language %}
+                      {% set hex = lang.hex %}
+                    {% endif %}
+                  {% endfor %}
+                  <i class="fa-solid fa-circle" style="color:{{ hex }}"></i>
+                  {{ item.language }}</div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+      <script src="/js/index.js"></script>
+    </body>
+  </body>
+</html>

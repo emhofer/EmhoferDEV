@@ -1,0 +1,163 @@
+/* ------Variables (Dark/Light)------ */
+:root:not(.light) {
+  --background-color: #343434;
+  --primary-color: #565656;
+  --font-color: #cdcdcc;
+}
+
+:root.light {
+  --background-color: #cdcdcc;
+  --primary-color: #ababab;
+  --font-color: #121212;
+}
+
+/* ------Main Styles------ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+
+.heroArea {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 1em;
+}
+
+.about {
+  padding: 1em;
+  margin: 2rem;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.stack,
+.portfolio {
+  padding: 1em;
+  margin: 1em;
+}
+
+.containerCards {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.card {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  min-height: 150px;
+  padding-left: 1em;
+  padding-top: 1px;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.containerStack {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stackItem {
+  background-color: var(--background-color);
+  display: flex;
+  height: 2em;
+  padding: 5px;
+  border: 1px solid var(--font-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.stackItem i {
+  position: absolute;
+}
+
+.stackName {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.stackItem:hover .stackName {
+  transition: 0.4s;
+  visibility: visible;
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.stackItem:hover i {
+  transition: 1s;
+  position: relative;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--font-color);
+  margin-right: 0.5rem;
+}
+
+.sectionHeading {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.btn-header,
+.btn-mode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  background: transparent;
+  border: none !important;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.card i {
+  margin-right: 10px;
+}
+
+.card:hover {
+  box-shadow: 2px 2px var(--font-color);
+}
+
+.githubInfo {
+  padding-bottom: 1em;
+}
+
+#emailLink {
+  text-transform: none;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .containerCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .containerStack {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .about {
+    width: 50%;
+    margin: auto;
+  }
+}
