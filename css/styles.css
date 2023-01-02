@@ -147,6 +147,23 @@ a {
   text-decoration: underline;
 }
 
+
+.lang-HTML {
+  color: #e34c26
+}
+
+.lang-JavaScript {
+  color: #f1e05a
+}
+
+.lang-CSS {
+  color: #563d7c
+}
+
+.lang-Nunjucks {
+  color: #3d8137
+}
+
 @media only screen and (min-width: 768px) {
   .containerCards {
     grid-template-columns: repeat(2, 1fr);
