@@ -54,10 +54,10 @@ body {
 }
 
 .card {
+  position: relative;
   background-color: var(--background-color);
   color: var(--font-color);
-  min-height: 150px;
-  height: 100%;
+  min-height: 170px;
   padding-left: 1em;
   padding-top: 1px;
 }
@@ -144,9 +144,9 @@ a {
   box-shadow: 0 0 5px var(--font-color);
 }
 
-
 .githubInfo {
-  padding-bottom: 1em;
+  position: absolute;
+  bottom: 1em;
 }
 
 #emailLink {
