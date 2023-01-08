@@ -56,7 +56,6 @@ body {
 .card {
   background-color: var(--background-color);
   color: var(--font-color);
-  border: 1px solid var(--font-color);
   min-height: 150px;
   padding-left: 1em;
   padding-top: 1px;
@@ -78,7 +77,6 @@ a {
   display: flex;
   height: 2em;
   padding: 5px;
-  border: 1px solid var(--font-color);
   justify-content: center;
   align-items: center;
 }
@@ -134,9 +132,17 @@ a {
   margin-right: 10px;
 }
 
-.card:hover {
-  box-shadow: 2px 2px var(--font-color);
+.card:hover,
+.stackItem:hover {
+  box-shadow: 0 0 10px var(--font-color);
 }
+
+.card,
+.stackItem {
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--font-color);
+}
+
 
 .githubInfo {
   padding-bottom: 1em;
