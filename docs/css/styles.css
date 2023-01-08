@@ -57,6 +57,7 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   min-height: 150px;
+  height: 100%;
   padding-left: 1em;
   padding-top: 1px;
 }
