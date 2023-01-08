@@ -1,14 +1,14 @@
 /* ------Variables (Dark/Light)------ */
 :root:not(.light) {
-  --background-color: #343434;
-  --primary-color: #565656;
+  --background-color: #0B1340;
+  --primary-color: #000;
   --font-color: #cdcdcc;
 }
 
 :root.light {
-  --background-color: #cdcdcc;
-  --primary-color: #ababab;
-  --font-color: #121212;
+  --background-color: #fff;
+  --primary-color: green;
+  --font-color: #0B1340;
 }
 
 /* ------Main Styles------ */
