@@ -57,7 +57,7 @@ body {
   position: relative;
   background-color: var(--background-color);
   color: var(--font-color);
-  height: 170px;
+  height: 180px;
   padding-left: 1em;
   padding-top: 1px;
 }
@@ -146,8 +146,8 @@ a {
 
 .githubInfo {
   position: absolute;
-  bottom: 1em;
-  padding-top: 5px;
+  bottom: 1.25em;
+  padding-top: 10px;
 }
 
 #emailLink {
@@ -184,5 +184,9 @@ a {
   .about {
     width: 50%;
     margin: auto;
+  }
+
+  .card {
+    height: 170px;
   }
 }
